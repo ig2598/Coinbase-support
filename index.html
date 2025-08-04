@@ -12,26 +12,26 @@
         padding: 0;
         color: #333;
         text-align: center;
-        border-top: 6px solid #0052ff; /* Light blue top border */
+        border-top: 6px solid #0052ff;
     }
     .logo img {
-        width: 180px;
-        margin-top: 20px;
+        width: 140px; /* Smaller logo */
+        margin-top: 15px;
     }
     h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
         font-weight: bold;
         margin: 10px 0;
         color: #0052ff;
     }
     p.subtitle {
-        font-size: 1.1rem;
+        font-size: 1rem;
         opacity: 0.9;
     }
     .banner {
         background: #f5f7fa;
         padding: 15px;
-        margin: 20px auto;
+        margin: 15px auto;
         width: 90%;
         border-radius: 8px;
         border: 1px solid #e0e0e0;
@@ -39,22 +39,39 @@
     .trust {
         display: flex;
         justify-content: center;
-        gap: 20px;
+        gap: 15px;
         margin-top: 15px;
         flex-wrap: wrap;
     }
     .trust div {
-        background: #0052ff; /* Blue background */
-        color: white; /* White text */
-        padding: 10px 15px;
+        background: #0052ff;
+        color: white;
+        padding: 8px 12px;
         border-radius: 8px;
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         border: none;
         box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
+    section {
+        width: 90%;
+        margin: 20px auto;
+        text-align: left;
+    }
+    section h2 {
+        color: #0052ff;
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+    }
+    section p, section li {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+    ul {
+        padding-left: 20px;
+    }
     footer {
-        margin-top: 40px;
-        font-size: 0.9rem;
+        margin-top: 20px;
+        font-size: 0.85rem;
         opacity: 0.8;
         padding-bottom: 20px;
     }
@@ -62,6 +79,14 @@
         color: #0052ff;
         text-decoration: none;
         margin: 0 5px;
+    }
+    /* Glowing chat bubble effect */
+    .smartsupp-widget-container {
+        animation: glow 1.5s infinite alternate;
+    }
+    @keyframes glow {
+        from { box-shadow: 0 0 5px #0052ff; }
+        to { box-shadow: 0 0 15px #00aaff; }
     }
 </style>
 </head>
@@ -84,6 +109,32 @@
     <div>📅 24/7 Availability</div>
     <div>⚡ Fast Response</div>
 </div>
+
+<section>
+    <h2>🔹 Important Security Notice</h2>
+    <p>Coinbase will <strong>never</strong> ask for your password or 2FA code. Please ensure you are speaking only with verified Coinbase agents.</p>
+</section>
+
+<section>
+    <h2>📌 Popular Support Topics</h2>
+    <ul>
+        <li>How to reset your Coinbase password</li>
+        <li>Verifying your account identity</li>
+        <li>Understanding transaction fees</li>
+        <li>Withdrawing funds to your bank</li>
+        <li>Reporting suspicious account activity</li>
+    </ul>
+</section>
+
+<section>
+    <h2>❓ Frequently Asked Questions</h2>
+    <p><strong>Q:</strong> How long does it take to receive a response?<br>
+       <strong>A:</strong> Most chats are answered within 2–5 minutes.</p>
+    <p><strong>Q:</strong> What hours is support available?<br>
+       <strong>A:</strong> We’re available <strong>24/7</strong> via live chat.</p>
+    <p><strong>Q:</strong> Can I get help if my account is locked?<br>
+       <strong>A:</strong> Yes — please use the chat to speak to an account recovery specialist.</p>
+</section>
 
 <footer>
     <a href="https://www.coinbase.com/legal/privacy" target="_blank">Privacy Policy</a> | 
