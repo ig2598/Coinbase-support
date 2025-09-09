@@ -87,12 +87,34 @@
         text-decoration: none;
         margin: 0 5px;
     }
-    .smartsupp-widget-container {
-        animation: glow 1.5s infinite alternate;
+    .chat-welcome {
+        position: fixed;
+        bottom: 100px;
+        right: 20px;
+        background: white;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        padding: 15px;
+        max-width: 280px;
+        font-size: 0.9rem;
+        z-index: 999;
     }
-    @keyframes glow {
-        from { box-shadow: 0 0 5px #0052ff; }
-        to { box-shadow: 0 0 15px #00aaff; }
+    .chat-welcome h3 {
+        margin: 0 0 8px;
+        font-size: 1rem;
+        color: #0052ff;
+    }
+    .chat-welcome button {
+        display: block;
+        margin-top: 10px;
+        background: #0052ff;
+        color: white;
+        border: none;
+        padding: 8px 12px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 0.9rem;
     }
 </style>
 </head>
@@ -141,6 +163,12 @@
     <p><strong>Q:</strong> Can I get help if my account is locked?<br>
        <strong>A:</strong> Yes — please use the chat to speak to an account recovery specialist.</p>
 </section>
+
+<div class="chat-welcome">
+    <h3>Welcome to our Helpdesk! 👋</h3>
+    <p>Need assistance with your account, transactions, or withdrawals? Our team is here to help you 24/7. 😊</p>
+    <button onclick="window.smartsupp('open');">Start Chat</button>
+</div>
 
 <footer>
     <a href="https://www.coinbase.com/legal/privacy" target="_blank">Privacy Policy</a> | 
